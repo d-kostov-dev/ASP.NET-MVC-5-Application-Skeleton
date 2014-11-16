@@ -15,17 +15,17 @@
 
         public string LastName { get; set; }
 
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
 
-        public int ContactPhone { get; set; }
+        public string ContactPhone { get; set; }
 
-        public int TownId { get; set; }
+        public int? TownId { get; set; }
 
         public virtual Town Town { get; set; }
 
-        public int Address { get; set; }
+        public string Address { get; set; }
 
-        public int ImageId { get; set; }
+        public int? ImageId { get; set; }
 
         public virtual Image Image { get; set; }
 

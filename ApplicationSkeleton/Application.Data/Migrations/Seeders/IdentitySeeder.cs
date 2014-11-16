@@ -40,7 +40,7 @@
                 { 
                     UserName = "admin@abv.bg", 
                     Email = "admin@abv.bg", 
-                    CreatedOn = DateTime.Now
+                    CreatedOn = DateTime.Now,
                 };
 
                 manager.Create(user, "123456");
@@ -56,7 +56,7 @@
                 { 
                     UserName = "user@abv.bg", 
                     Email = "user@abv.bg", 
-                    CreatedOn = DateTime.Now 
+                    CreatedOn = DateTime.Now,
                 };
 
                 manager.Create(user, "123456");
