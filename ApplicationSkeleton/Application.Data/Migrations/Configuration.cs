@@ -20,6 +20,7 @@ namespace Application.Data.Migrations
             IdentitySeeder.Seed(context);
             InfoPageSeeder.Seed(context);
             CategorySeeder.Seed(context);
+            CountrySeeder.Seed(context);
 
             // Just in case i don't save in any of the seeders
             context.SaveChanges();
