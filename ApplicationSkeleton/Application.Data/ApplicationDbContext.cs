@@ -4,6 +4,7 @@
     using System.Data.Entity.ModelConfiguration.Conventions;
 
     using Application.Data.Contracts;
+    using Application.Data.Migrations;
     using Application.Models;
 
     using Microsoft.AspNet.Identity.EntityFramework;
@@ -13,6 +14,8 @@
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+            Database.SetInitializer(
+                new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());
         }
 
         public static ApplicationDbContext Create()
