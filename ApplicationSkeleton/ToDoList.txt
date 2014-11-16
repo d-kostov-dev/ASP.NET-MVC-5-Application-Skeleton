@@ -8,7 +8,7 @@ DONE - Categories
 DONE - Informational Pages
 DONE - Admin Area
 DONE - FormGroupHelpers
-RandomgValueGenerator
+DONE - RandomgValueGenerator
 DONE - Migrations
 DONE - KendoUI
 DONE - StyleCop
