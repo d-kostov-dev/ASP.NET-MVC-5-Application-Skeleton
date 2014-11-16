@@ -21,6 +21,7 @@ namespace Application.Data.Migrations
             InfoPageSeeder.Seed(context);
             CategorySeeder.Seed(context);
             CountrySeeder.Seed(context);
+            TownSeeder.Seed(context);
 
             // Just in case i don't save in any of the seeders
             context.SaveChanges();
