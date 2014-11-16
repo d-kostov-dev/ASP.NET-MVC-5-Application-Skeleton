@@ -1,4 +1,4 @@
-Bundles config in separated methods.
+DONE - Bundles config in separated methods.
 AccountViewModels in separate classes.
 DONE - Ninject
 DONE - Automapper
@@ -10,12 +10,12 @@ Admin Area
 DONE - FormGroupHelpers
 RandomgValueGenerator
 DONE - Migrations
-KendoUI
+DONE - KendoUI
 StyleCop
 DONE - Validation Attributes
 DONE - Seed Initial Data
 DONE - Countries
 DONE - Towns
 DONE - BaseController
-User in base controller
+DONE - User in base controller
 DONE - Turn off webforms viewengine

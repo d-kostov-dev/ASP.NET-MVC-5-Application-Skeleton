@@ -16,9 +16,7 @@ namespace Application.Web.Controllers
 
         public ActionResult Index()
         {
-            var pagesTitles = this.Data.InfoPages.All().Select(x => x.Title).ToList();
-
-            return Content(string.Join(", ", pagesTitles));
+            return this.View();
         }
     }
 }
