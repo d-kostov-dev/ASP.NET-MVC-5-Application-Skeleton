@@ -11,6 +11,20 @@
 
     public class ApplicationUser : IdentityUser, IAuditInfo
     {
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
+
+        public DateTime DateOfBirth { get; set; }
+
+        public int ContactPhone { get; set; }
+
+        public int Address { get; set; }
+
+        public int ImageId { get; set; }
+
+        public virtual Image Image { get; set; }
+
         public DateTime CreatedOn { get; set; }
 
         public bool PreserveCreatedOn { get; set; }
