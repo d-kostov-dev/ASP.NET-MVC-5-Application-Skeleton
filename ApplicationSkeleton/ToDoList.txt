@@ -6,12 +6,12 @@ DONE - Repository
 DONE - UnitOfWork
 DONE - Categories
 DONE - Informational Pages
-Admin Area
+DONE - Admin Area
 DONE - FormGroupHelpers
 RandomgValueGenerator
 DONE - Migrations
 DONE - KendoUI
-StyleCop
+DONE - StyleCop
 DONE - Validation Attributes
 DONE - Seed Initial Data
 DONE - Countries
