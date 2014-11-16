@@ -11,7 +11,7 @@
     using System.IO;
     using Application.Models;
     using System;
-   
+
     [Authorize]
     public class ProfileController : BaseController
     {
@@ -119,6 +119,14 @@
             var items = new SelectList(this.Data.Towns.All().Where(x => x.CountryId == countryId).ToList(), "Id", "Name", id.ToString());
 
             ViewBag.Towns = items;
+        }
+
+        public JsonResult RefreshTowns(int id)
+        {
+            var items = 
+                new SelectList(this.Data.Towns.All().Where(x => x.CountryId == id).ToList(), "Id", "Name");
+
+            return Json(items, JsonRequestBehavior.AllowGet);
         }
     }
 }

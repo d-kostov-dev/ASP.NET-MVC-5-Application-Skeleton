@@ -40,4 +40,19 @@
 </div>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/jscript">
+        $(function () {
+            $('#CountryId').change(function () {
+                $.getJSON('/Profile/RefreshTowns/' + $('#CountryId').val(), function (data) {
+                    var items = '<option>Select a District</option>';
+
+                    $.each(data, function (i, town) {
+                        items += "<option value='" + town.Value + "'>" + town.Text + "</option>";
+                    });
+
+                    $('#TownId').html(items);
+                });
+            });
+        });
+    </script>
 }
