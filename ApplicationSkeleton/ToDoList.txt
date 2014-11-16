@@ -1,19 +1,21 @@
 Bundles config in separated methods.
 AccountViewModels in separate classes.
 Ninject
-Automapper
+DONE - Automapper
 DONE - Repository
 DONE - UnitOfWork
 DONE - Categories
 DONE - Informational Pages
 Admin Area
-FormGroupHelpers
-CorsFilter
+DONE - FormGroupHelpers
 RandomgValueGenerator
 DONE - Migrations
 KendoUI
 StyleCop
 DONE - Validation Attributes
 DONE - Seed Initial Data
-Countries
-Towns
+DONE - Countries
+DONE - Towns
+BaseController
+User in base controller
+Turn off webforms viewengine
