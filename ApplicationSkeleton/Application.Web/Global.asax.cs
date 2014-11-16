@@ -19,6 +19,8 @@ namespace Application.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
+            ViewEnginesConfig.RegisterViewEngines(ViewEngines.Engines);
+
             var autoMapperConfig = new AutoMapperConfig(Assembly.GetExecutingAssembly());
             autoMapperConfig.Execute();
         }
