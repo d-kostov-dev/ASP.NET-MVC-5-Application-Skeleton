@@ -3,8 +3,16 @@
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
 
+    using Application.Models;
+
     public interface IDbContext
     {
+        IDbSet<InfoPage> InfoPages { get; set; }
+
+        IDbSet<Category> Categories { get; set; }
+
+        IDbSet<Image> Images { get; set; }
+
         int SaveChanges();
 
         IDbSet<TEntity> Set<TEntity>() where TEntity : class;

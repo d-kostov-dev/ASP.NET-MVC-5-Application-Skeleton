@@ -57,6 +57,9 @@
     <Compile Include="Contracts\IDbContext.cs" />
     <Compile Include="Contracts\IRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Seeders\CategorySeeder.cs" />
+    <Compile Include="Migrations\Seeders\IdentitySeeder.cs" />
+    <Compile Include="Migrations\Seeders\InfoPageSeeder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="UnitOfWork\DataProvider.cs" />
@@ -66,11 +69,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Application.Common\Application.Common.csproj">
+      <Project>{dd8afebb-fb42-4088-940d-9298b9477f3b}</Project>
+      <Name>Application.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Application.Models\Application.Models.csproj">
       <Project>{18ed1e74-d959-4c90-b478-3fe80fa27c24}</Project>
       <Name>Application.Models</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -4,14 +4,14 @@ Ninject
 Automapper
 DONE - Repository
 DONE - UnitOfWork
-Categories
-Informational Pages
+DONE - Categories
+DONE - Informational Pages
 Admin Area
 FormGroupHelpers
 CorsFilter
 RandomgValueGenerator
-Migrations
+DONE - Migrations
 KendoUI
 StyleCop
-Validation Attributes
-Seed Initial Data
+DONE - Validation Attributes
+DONE - Seed Initial Data

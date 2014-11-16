@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Application.Common
+﻿namespace Application.Common
 {
     public static class GlobalConstants
     {
+        public const string AdminRole = "Administrator";
+        public const string UserRole = "User";
     }
 }

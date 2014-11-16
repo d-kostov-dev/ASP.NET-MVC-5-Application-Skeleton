@@ -5,6 +5,8 @@ namespace Application.Data.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
+    using Application.Data.Migrations.Seeders;
+
     public sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
     {
         public Configuration()
@@ -15,6 +17,12 @@ namespace Application.Data.Migrations
 
         protected override void Seed(ApplicationDbContext context)
         {
+            IdentitySeeder.Seed(context);
+            InfoPageSeeder.Seed(context);
+            CategorySeeder.Seed(context);
+
+            // Just in case i don't save in any of the seeders
+            context.SaveChanges();
         }
     }
 }

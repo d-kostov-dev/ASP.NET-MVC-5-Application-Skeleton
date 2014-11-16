@@ -24,6 +24,21 @@
             get { return this.GetRepository<ApplicationUser>(); }
         }
 
+        public IRepository<InfoPage> InfoPages
+        {
+            get { return this.GetRepository<InfoPage>(); }
+        }
+
+        public IRepository<Category> Categories
+        {
+            get { return this.GetRepository<Category>(); }
+        }
+
+        public IRepository<Image> Images
+        {
+            get { return this.GetRepository<Image>(); }
+        }
+
         public int SaveChanges()
         {
             return this.databaseContext.SaveChanges();
