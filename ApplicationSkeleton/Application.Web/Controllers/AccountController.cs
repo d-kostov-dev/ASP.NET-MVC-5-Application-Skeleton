@@ -11,6 +11,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Owin;
 using Application.Web.Models;
+using Application.Models;
 
 namespace Application.Web.Controllers
 {

@@ -4,6 +4,8 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Application.Web.Models;
+using Application.Models;
+using Application.Data;
 
 namespace Application.Web
 {

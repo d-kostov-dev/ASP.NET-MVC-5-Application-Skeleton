@@ -1,0 +1,17 @@
+Bundles config in separated methods.
+AccountViewModels in separate classes.
+Ninject
+Automapper
+DONE - Repository
+DONE - UnitOfWork
+Categories
+Informational Pages
+Admin Area
+FormGroupHelpers
+CorsFilter
+RandomgValueGenerator
+Migrations
+KendoUI
+StyleCop
+Validation Attributes
+Seed Initial Data

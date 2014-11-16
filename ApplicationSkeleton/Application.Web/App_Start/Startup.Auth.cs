@@ -8,6 +8,8 @@ using Microsoft.Owin.Security.Google;
 using Owin;
 using System;
 using Application.Web.Models;
+using Application.Models;
+using Application.Data;
 
 namespace Application.Web
 {
