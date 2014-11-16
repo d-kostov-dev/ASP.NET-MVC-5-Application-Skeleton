@@ -1,0 +1,43 @@
+﻿@model Application.Web.Models.Profile.ProfileEditInputModel
+@using Application.Web.Infrastructure.HtmlHelpers
+@{
+    ViewBag.Title = "Edit Profile";
+}
+
+<h2>@ViewBag.Title.</h2>
+<div class="row">
+    <div class="col-md-8">
+        @using (Html.BeginForm("Edit", "Profile", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary("", new { @class = "text-danger" })
+
+            @Html.FormGroupFor(m => m.Email)
+            @Html.FormGroupFor(m => m.UserName)
+            @Html.FormGroupFor(m => m.FirstName)
+            @Html.FormGroupFor(m => m.LastName)
+            @Html.FormGroupFor(m => m.DateOfBirth)
+            @Html.FormGroupFor(m => m.ContactPhone)
+            @Html.DropdownFormGroupFor(m => m.CountryId, (IEnumerable<SelectListItem>)ViewBag.Countries)
+            @Html.DropdownFormGroupFor(m => m.TownId, (IEnumerable<SelectListItem>)ViewBag.Towns)
+            @Html.FormGroupFor(m => m.Address)
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.UploadedImage, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    <input type="file" name="UploadedImage" id="UploadedImage" class="form-control" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    @Html.SubmitButton("Edit Profile")
+                    @Html.SuccessButton("Cancel", "Details")
+                </div>
+            </div>
+        }
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
