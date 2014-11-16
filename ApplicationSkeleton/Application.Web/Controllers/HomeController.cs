@@ -1,12 +1,9 @@
-﻿using Application.Data.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-namespace Application.Web.Controllers
+﻿namespace Application.Web.Controllers
 {
+    using System.Web.Mvc;
+
+    using Application.Data.Contracts;
+
     public class HomeController : BaseController
     {
         public HomeController(IDataProvider provider)

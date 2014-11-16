@@ -1,5 +1,5 @@
 DONE - Bundles config in separated methods.
-AccountViewModels in separate classes.
+DONE - AccountViewModels in separate classes.
 DONE - Ninject
 DONE - Automapper
 DONE - Repository
