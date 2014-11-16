@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="GlobalConstants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValuesGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Enumerations\" />

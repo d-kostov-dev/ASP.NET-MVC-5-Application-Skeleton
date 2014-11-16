@@ -114,7 +114,7 @@
         {
             var id = this.CurrentUser.Town != null ? this.CurrentUser.Town.CountryId : 1;
 
-            var items = new SelectList(this.Data.Countries.All().ToList(), "Id", "Name", id.ToString());
+            var items = new SelectList(this.Data.Countries.All().Where(x => x.Towns.Count() > 0).ToList(), "Id", "Name", id.ToString());
 
             this.ViewBag.Countries = items;
         }
