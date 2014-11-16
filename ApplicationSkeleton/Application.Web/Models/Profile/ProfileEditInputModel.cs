@@ -1,14 +1,14 @@
 ﻿namespace Application.Web.Models.Profile
 {
     using System;
+    using System.ComponentModel.DataAnnotations;
     using System.Web;
 
     using Application.Models;
     using Application.Web.Infrastructure.Mapping;
 
     using AutoMapper;
-    using System.ComponentModel.DataAnnotations;
-   
+    
     public class ProfileEditInputModel : IMapFrom<ApplicationUser>, IHaveCustomMappings
     {
         [Display(Name = "User Name")]

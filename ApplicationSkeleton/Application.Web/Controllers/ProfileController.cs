@@ -1,16 +1,17 @@
 ﻿namespace Application.Web.Controllers
 {
+    using System;
+    using System.IO;
     using System.Linq;
     using System.Web;
     using System.Web.Mvc;
 
     using Application.Data.Contracts;
-    using Application.Web.Models;
-    using AutoMapper.QueryableExtensions;
-    using Application.Web.Models.Profile;
-    using System.IO;
     using Application.Models;
-    using System;
+    using Application.Web.Models;
+    using Application.Web.Models.Profile;
+
+    using AutoMapper.QueryableExtensions;
 
     [Authorize]
     public class ProfileController : BaseController
@@ -28,12 +29,11 @@
                 .Project().To<ProfileDetailsViewModel>()
                 .FirstOrDefault();
 
-            return View(profile);
+            return this.View(profile);
         }
 
         public ActionResult Edit()
         {
-
             this.SetCountries();
             this.SetTowns();
 
@@ -81,13 +81,13 @@
 
                 this.Data.SaveChanges();
 
-                return RedirectToAction("Details");
+                return this.RedirectToAction("Details");
             }
 
             this.SetCountries();
             this.SetTowns();
 
-            return View(inputData);
+            return this.View(inputData);
         }
 
         public ActionResult GetImage(int id)
@@ -99,7 +99,15 @@
                 throw new HttpException(404, "Image not found");
             }
 
-            return File(image.Content, "image/" + image.FileExtension);
+            return this.File(image.Content, "image/" + image.FileExtension);
+        }
+
+        public JsonResult RefreshTowns(int id)
+        {
+            var items =
+                new SelectList(this.Data.Towns.All().Where(x => x.CountryId == id).ToList(), "Id", "Name");
+
+            return this.Json(items, JsonRequestBehavior.AllowGet);
         }
 
         private void SetCountries()
@@ -108,7 +116,7 @@
 
             var items = new SelectList(this.Data.Countries.All().ToList(), "Id", "Name", id.ToString());
 
-            ViewBag.Countries = items;
+            this.ViewBag.Countries = items;
         }
 
         private void SetTowns()
@@ -118,15 +126,7 @@
 
             var items = new SelectList(this.Data.Towns.All().Where(x => x.CountryId == countryId).ToList(), "Id", "Name", id.ToString());
 
-            ViewBag.Towns = items;
-        }
-
-        public JsonResult RefreshTowns(int id)
-        {
-            var items = 
-                new SelectList(this.Data.Towns.All().Where(x => x.CountryId == id).ToList(), "Id", "Name");
-
-            return Json(items, JsonRequestBehavior.AllowGet);
+            this.ViewBag.Towns = items;
         }
     }
 }

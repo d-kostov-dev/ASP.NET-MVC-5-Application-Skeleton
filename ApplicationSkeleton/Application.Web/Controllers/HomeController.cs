@@ -7,7 +7,7 @@
     public class HomeController : BaseController
     {
         public HomeController(IDataProvider provider)
-            : base (provider)
+            : base(provider)
         {
         }
 
