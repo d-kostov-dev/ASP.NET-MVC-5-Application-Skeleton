@@ -20,6 +20,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ToDo", "ToDo", "{3CAD2B70-7923-4C0A-95B3-F56E1F6B8E10}"
 	ProjectSection(SolutionItems) = preProject
 		ToDoList.txt = ToDoList.txt
+		TrashCode.txt = TrashCode.txt
 	EndProjectSection
 EndProject
 Global

@@ -43,8 +43,8 @@ namespace Application.Web
                         "~/Scripts/kendo/kendo.web.min.js",
                         "~/Scripts/kendo/kendo.aspnetmvc.min.js"));
 
-            //bundles.Add(new ScriptBundle("~/bundles/jqueryajax").Include(
-            //            "~/Scripts/jquery.unobtrusive-ajax.js"));
+            bundles.Add(new ScriptBundle("~/bundles/jqueryajax").Include(
+                        "~/Scripts/jquery.unobtrusive-ajax.js"));
         }
     }
 }

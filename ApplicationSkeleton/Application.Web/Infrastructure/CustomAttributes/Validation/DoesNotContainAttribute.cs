@@ -7,7 +7,7 @@
     using System.Web.Mvc;
 
     [AttributeUsage(AttributeTargets.Property)]
-    public class DoesNotContainAttribute : ValidationAttribute, IClientValidatable
+    public class DoesNotContainAttribute : ValidationAttribute
     {
         private readonly string word;
 
