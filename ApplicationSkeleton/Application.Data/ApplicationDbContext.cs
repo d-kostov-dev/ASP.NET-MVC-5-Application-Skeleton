@@ -8,7 +8,7 @@
     using Application.Models;
 
     using Microsoft.AspNet.Identity.EntityFramework;
-    
+
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IDbContext
     {
         public ApplicationDbContext()
@@ -23,6 +23,10 @@
         public virtual IDbSet<Category> Categories { get; set; }
 
         public virtual IDbSet<Image> Images { get; set; }
+
+        public virtual IDbSet<Country> Countries { get; set; }
+
+        public virtual IDbSet<Town> Towns { get; set; }
 
         public static ApplicationDbContext Create()
         {

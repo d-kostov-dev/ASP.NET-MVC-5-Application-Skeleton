@@ -39,6 +39,16 @@
             get { return this.GetRepository<Image>(); }
         }
 
+        public IRepository<Country> Countries
+        {
+            get { return this.GetRepository<Country>(); }
+        }
+
+        public IRepository<Town> Towns
+        {
+            get { return this.GetRepository<Town>(); }
+        }
+
         public int SaveChanges()
         {
             return this.databaseContext.SaveChanges();

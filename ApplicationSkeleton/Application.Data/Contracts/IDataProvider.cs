@@ -12,6 +12,10 @@
 
         IRepository<Image> Images { get; }
 
+        IRepository<Country> Countries { get; }
+
+        IRepository<Town> Towns { get; }
+
         int SaveChanges();
     }
 }
