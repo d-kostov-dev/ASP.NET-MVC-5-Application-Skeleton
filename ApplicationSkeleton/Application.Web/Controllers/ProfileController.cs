@@ -26,5 +26,17 @@ namespace Application.Web.Controllers
 
             return View(profile);
         }
+
+        public ActionResult GetImage(int id)
+        {
+            var image = this.Data.Images.Find(id);
+
+            if (image == null)
+            {
+                throw new HttpException(404, "Image not found");
+            }
+
+            return File(image.Content, "image/" + image.FileExtension);
+        }
     }
 }

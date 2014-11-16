@@ -14,7 +14,7 @@
                 <div class="panel-body">
                     @if (Model.ImageId != null)
                     {
-                        <img src="@Url.Action("GetPhoto", "Profile", new { id = Model.ImageId })" class="img-responsive center-block" />
+                        <img src="@Url.Action("GetImage", "Profile", new { id = Model.ImageId })" class="img-responsive center-block" />
                     }
                     else
                     {
