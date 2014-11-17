@@ -4,6 +4,8 @@
 
     public interface IDataProvider
     {
+        IDbContext Context { get; }
+
         IRepository<ApplicationUser> ApplicationUsers { get; }
 
         IRepository<InfoPage> InfoPages { get; }

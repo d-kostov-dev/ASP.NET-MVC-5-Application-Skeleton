@@ -27,8 +27,6 @@
 
         public int? ImageId { get; set; }
 
-        public DateTime CreatedOn { get; set; }
-
         public void CreateMappings(IConfiguration configuration)
         {
             configuration.CreateMap<ApplicationUser, ProfileDetailsViewModel>()

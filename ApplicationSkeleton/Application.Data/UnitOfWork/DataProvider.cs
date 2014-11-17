@@ -49,6 +49,14 @@
             get { return this.GetRepository<Town>(); }
         }
 
+        public IDbContext Context
+        {
+            get
+            {
+                return this.databaseContext;
+            }
+        }
+
         public int SaveChanges()
         {
             return this.databaseContext.SaveChanges();
@@ -66,5 +74,7 @@
 
             return (IRepository<T>)this.createdRepositories[typeOfRepository];
         }
+
+        
     }
 }

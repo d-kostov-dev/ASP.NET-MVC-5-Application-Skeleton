@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Application.Common
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -21,11 +23,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Application name", "Index", "Home", new { area = string.Empty }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" id="kendoMenu">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = string.Empty }, null)</li>
+                    @if (Request.IsAuthenticated && User.IsInRole(GlobalConstants.AdminRole))
+                    {
+                        <li>@Html.ActionLink("Administration", "Index", "Categories", new { area = "Administration"}, null)</li>
+                    }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -43,7 +49,7 @@
                     <p class="text-muted text-center">Made By <a href="#">Pesho Dev International</a> | Powered By <a href="http://www.asp.net/mvc">ASP.NET MVC</a> </p>
                 </div>
                 <div class="col-md-6">
-                    @Html.Action("GetPages", "Pages")
+                    @Html.Action("GetPages", "Pages", new { area = string.Empty })
                 </div>
             </div>
         </div>

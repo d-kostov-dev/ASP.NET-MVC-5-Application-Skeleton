@@ -17,6 +17,8 @@
 
         IDbSet<Town> Towns { get; set; }
 
+        DbContext DbContext { get; }
+
         int SaveChanges();
 
         IDbSet<TEntity> Set<TEntity>() where TEntity : class;
