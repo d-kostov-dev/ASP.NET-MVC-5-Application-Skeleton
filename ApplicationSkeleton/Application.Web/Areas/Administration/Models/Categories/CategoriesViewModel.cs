@@ -1,11 +1,11 @@
 ﻿namespace Application.Web.Areas.Administration.Models.Categories
 {
     using System.ComponentModel.DataAnnotations;
+    using System.Web.Mvc;
 
     using Application.Models;
     using Application.Web.Infrastructure.Mapping;
-    using System.Web.Mvc;
-    
+
     public class CategoriesViewModel : AdministrationViewModel, IMapFrom<Category>
     {
         [HiddenInput(DisplayValue = false)]

@@ -1,5 +1,6 @@
 ﻿namespace Application.Web.Areas.Administration.Controllers
 {
+    using System;
     using System.Collections;
     using System.Web.Mvc;
 
@@ -10,8 +11,7 @@
 
     using Model = Application.Models.Category;
     using ViewModel = Application.Web.Areas.Administration.Models.Categories.CategoriesViewModel;
-    using System;
-
+    
     public class CategoriesController : KendoGridAdministrationController
     {
         public CategoriesController(IDataProvider data)
@@ -21,28 +21,18 @@
 
         public ActionResult Index()
         {
-            return View();
-        }
-
-        protected override IEnumerable GetData()
-        {
-            return this.Data.Categories.All();
-        }
-
-        protected override T GetById<T>(object id)
-        {
-            return this.Data.Categories.Find(id) as T;
+            return this.View();
         }
 
         [HttpPost]
         public ActionResult Create([DataSourceRequest]DataSourceRequest request, ViewModel model)
         {
             model.CreatedOn = DateTime.Now;
-            var dbModel = base.Create<Model>(model);
+            var databaseModel = base.Create<Model>(model);
 
-            if (dbModel != null)
+            if (databaseModel != null)
             {
-                model.Id = dbModel.Id;
+                model.Id = databaseModel.Id;
             }
 
             return this.GridOperation(model, request);
@@ -65,6 +55,16 @@
             }
 
             return this.GridOperation(model, request);
+        }
+
+        protected override IEnumerable GetData()
+        {
+            return this.Data.Categories.All();
+        }
+
+        protected override T GetById<T>(object id)
+        {
+            return this.Data.Categories.Find(id) as T;
         }
     }
 }

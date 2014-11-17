@@ -74,7 +74,5 @@
 
             return (IRepository<T>)this.createdRepositories[typeOfRepository];
         }
-
-        
     }
 }
