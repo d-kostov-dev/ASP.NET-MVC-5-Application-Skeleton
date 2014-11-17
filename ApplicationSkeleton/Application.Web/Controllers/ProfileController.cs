@@ -102,7 +102,7 @@
             return this.File(image.Content, "image/" + image.FileExtension);
         }
 
-        public JsonResult RefreshTowns(int id)
+        public JsonResult RefreshTowns(int? id)
         {
             var items =
                 new SelectList(this.Data.Towns.All().Where(x => x.CountryId == id).ToList(), "Id", "Name");
